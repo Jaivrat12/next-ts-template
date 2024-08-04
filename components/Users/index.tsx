@@ -46,7 +46,7 @@ const Users = () => {
                             <Pagination
                                 color="primary"
                                 page={usersPage?.meta.page}
-                                total={usersPage?.meta.totalDocs ?? 1}
+                                total={usersPage?.meta.totalPages || 1}
                                 isDisabled={isUsersPageLoading}
                                 // onChange={(page) => setQuery((query) => ({
                                 //     ...query,
