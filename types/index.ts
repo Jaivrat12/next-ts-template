@@ -5,7 +5,7 @@ import type { AxiosResponse } from 'axios';
 export type RecordKey = string | number | symbol;
 
 export type ChildrenProps = Readonly<{
-    children: ReactNode;
+    children?: ReactNode;
 }>;
 
 export interface Page<T> {
