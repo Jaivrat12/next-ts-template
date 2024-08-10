@@ -17,5 +17,5 @@ export interface Page<T> {
     };
 }
 
-export type QueryOptions<T> = UseQueryOptions<AxiosResponse<T>>;
+export type QueryOptions<T> = Omit<UseQueryOptions<AxiosResponse<T>>, 'queryKey'>;
 export type MutationOptions<T> = UseMutationOptions<AxiosResponse<T>>;

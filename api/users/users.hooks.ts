@@ -7,7 +7,7 @@ export const USERS_QUERY_KEY = 'users';
 const getEndpoint = (id?: string) => '/users/' + (id ?? '');
 
 export function useGetAllUsersQuery(
-    // TODO: query
+    // TODO: query (search, filters, etc)
     options?: QueryOptions<Page<User[]>>
 ) {
     return useQuery({

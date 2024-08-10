@@ -1,5 +1,5 @@
 import { useEffect, type ReactNode } from 'react';
-import { Button, ButtonProps } from '@nextui-org/react';
+import { Button, ButtonProps, cn } from '@nextui-org/react';
 import {
     FaCircleCheck,
     FaCircleExclamation,
@@ -7,7 +7,6 @@ import {
     FaTriangleExclamation,
 } from 'react-icons/fa6';
 import { IoMdClose } from 'react-icons/io';
-import { cn } from '@/lib/utils';
 import type { ChildrenProps } from '@/types';
 
 export type Severity = 'info' | 'success' | 'warning' | 'error';
