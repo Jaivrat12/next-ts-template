@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Providers } from './providers';
+import Navbar from '@/components/Navbar';
 import type { ChildrenProps } from '@/types';
 
 import './globals.css';
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: ChildrenProps) {
         >
             <body className={inter.className}>
                 <Providers>
+                    <Navbar />
 					{children}
 				</Providers>
             </body>

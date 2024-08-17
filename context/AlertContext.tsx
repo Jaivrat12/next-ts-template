@@ -50,16 +50,18 @@ export const AlertProvider = ({ max, children }: AlertProviderProps) => {
 
     return (
         <AlertContext.Provider value={{ showAlert, clearAlertStack }}>
-            <div className="container pt-4 absolute z-[999999]">
-                {alerts.map((alert) => (
-                    <Alert
-                        key={alert.id}
-                        {...alert}
-                        className="mb-4"
-                        onClose={() => closeAlert(alert.id)}
-                    />
-                ))}
-            </div>
+            {alerts.length > 0 && (
+                <div className="container pt-4 absolute z-[999999]">
+                    {alerts.map((alert) => (
+                        <Alert
+                            key={alert.id}
+                            {...alert}
+                            className="mb-4"
+                            onClose={() => closeAlert(alert.id)}
+                        />
+                    ))}
+                </div>
+            )}
 
             {children}
         </AlertContext.Provider>
